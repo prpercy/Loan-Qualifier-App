@@ -32,6 +32,21 @@ In order to use libraries such as 'fire' and 'questionary', please first install
 
 ---
 
+
+## Usage
+
+> py app.py
+
+This will prompt user to enter file path as follows:
+
+> ? Enter a file path to a rate sheet (.csv)
+
+Once user provides appropriate file path it will navigate user with following interaction:
+
+!['User Interaction](./data/Input%20Output%20Prompts.jpg)
+
+---
+
 ## Contributors
 
 Main author is : Pravin Patil. His linkedin profile is [Profile](https://www.linkedin.com/in/pravin-patil-5880301)
