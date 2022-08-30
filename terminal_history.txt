@@ -1,0 +1,100 @@
+  462  ls
+  463  cd Fintech/
+  464  cd Fintech-Workspace/fintech/Module2/Module2/
+  465  clear
+  466  ls
+  467  git remote
+  468  git pull
+  469  git fetch origin
+  470  clear
+  471  git status
+  472  git status
+  473  git add ./loan_qualifier_app/data/Input\ Output\ Prompts.jpg 
+  474  git add ./loan_qualifier_app/README.md 
+  475  git status
+  476  git commit ./loan_qualifier_app/data/Input\ Output\ Prompts.jpg -m="Added user interaction experience image for referencing in readme file"
+  477  git pull
+  478  conda deactivate
+  479  clear
+  480  git pull
+  481  git config --list
+  482  pwd
+  483  cd C:/
+  484  ls
+  485  cd Pravin/Fintech/Fintech-Workspace/
+  486  clear
+  487  ls
+  488  ls
+  489  clear
+  490  conda activate dev
+  491  clear
+  492  cd git config --list
+  493  git config --list
+  494  cd module2/
+  495  clear
+  496  git clone https://github.com/prpercy/module2.git
+  497  git reflog
+  498  git config --list
+  499  cd module2/
+  500  git config --list
+  501  conda activate dev
+  502  pwd
+  503  cd C:/
+  504  clear
+  505  ls
+  506  cd Pravin/Fintech/Fintech-Workspace/
+  507  clear
+  508  ls
+  509  ls
+  510  git clone https://github.com/prpercy/module2.git
+  511  clear
+  512  cd module2/
+  513  clear
+  514  ls
+  515  git status
+  516  git add ./loan_qualifier_app/
+  517  git status
+  518  git commit -m="Added starter code for the Module 2 challenge assignment in Repo"
+  519  git push
+  520  clear
+  521  git status
+  522  git add ./README.md 
+  523  git status
+  524  git commit ./README.md -m="Modified assignment readme file. Please note that this is different from loan qualifier app readme file".
+  525  git push
+  526  clear
+  527  ls
+  528  git status
+  529  git add ./loan_qualifier_app/README.md 
+  530  git status
+  531  git commit ./loan_qualifier_app/README.md -m="Added app description, installations, license, author details as part of project documentation"
+  532  git push
+  533  clear
+  534  git status
+  535  git add ./loan_qualifier_app/qualifier/utils/fileio.py 
+  536  git status
+  537  git commit ./loan_qualifier_app/qualifier/utils/fileio.py -m="Added Save_CSV function that writes data from list into CSV file"
+  538  git push
+  539  clear
+  540  git status
+  541  git add ./loan_qualifier_app/app.py 
+  542  git status
+  543  clear
+  544  git status
+  545  git commit ./loan_qualifier_app/app.py -m="Added code to run as per user story and acceptance criteria"
+  546  git push
+  547  clear
+  548  git status
+  549  git add ./loan_qualifier_app/data/Input\ Output\ Prompts.jpg 
+  550  git commit ./loan_qualifier_app/data/Input\ Output\ Prompts.jpg -m="Added an image showing user experience via CLI for referencing in readme documentation"
+  551  git push
+  552  clear
+  553  git status
+  554  git add ./loan_qualifier_app/README.md 
+  555  git status
+  556  clear
+  557  git commit ./loan_qualifier_app/README.md -m="Added usage section in readme file"
+  558  git push
+  559  clear
+  560  history 50 > terminal_history.txt
+  561  history 100 > terminal_history.txt
