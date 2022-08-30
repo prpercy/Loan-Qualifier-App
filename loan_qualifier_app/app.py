@@ -11,7 +11,7 @@ import fire
 import questionary
 from pathlib import Path
 
-from qualifier.utils.fileio import load_csv
+from qualifier.utils.fileio import load_csv, save_csv
 
 from qualifier.utils.calculators import (
     calculate_monthly_debt_ratio,
@@ -102,7 +102,7 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
     return bank_data_filtered
 
 
-def save_qualifying_loans(qualifying_loans):
+def save_qualifying_loans(qualifying_loans, header):
     """Saves the qualifying loans to a CSV file.
 
     Args:
@@ -110,6 +110,22 @@ def save_qualifying_loans(qualifying_loans):
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
+    save_qualifying_loans_as_csv = questionary.confirm(
+        '\n Do you wish to save qualifying loans to a CSV file?'
+    ).ask()
+
+    # insert the header at the beginning of qualifying loans list
+    qualifying_loans.insert(0,header)
+
+    if save_qualifying_loans_as_csv :
+        # Request user for the path of CSV file
+        csvpath = questionary.path('Please provide Path to the csv file').ask()
+        save_csv(csvpath, qualifying_loans)    
+    else:
+        print('\n Qualifying loans are as follows: ---')
+        for row in qualifying_loans:
+            print(row)
+        print('\n ---')
 
 
 def run():
@@ -126,8 +142,16 @@ def run():
         bank_data, credit_score, debt, income, loan_amount, home_value
     )
 
-    # Save qualifying loans
-    save_qualifying_loans(qualifying_loans)
+    if len(qualifying_loans) <= 0:
+        # If no qualifying loans, program should notify the user and exit.
+        print('\n There are no qualifying loans for your application!')
+    else:
+        # Define Header for csv file write up
+        header = ['Lender','Max Loan Amount','Max LTV','Max DTI','Min Credit Score','Interest Rate']
+        # Save qualifying loans
+        # If there are qualifying loans, user should be prompted to save the results in CSV file
+        print('\n Please save the qualifying loans to a CSV file!')
+        save_qualifying_loans(qualifying_loans, header)
 
 
 if __name__ == "__main__":
