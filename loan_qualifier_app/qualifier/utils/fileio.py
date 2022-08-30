@@ -28,3 +28,20 @@ def load_csv(csvpath):
         for row in csvreader:
             data.append(row)
     return data
+
+def save_csv(csvpath, data):
+    """Writes the data into the CSV file at the path provided.
+
+    Args:
+        csvpath (Path): The csv file path.
+        data: list that needs to be written in csv file
+        header: header in the csv file
+    """
+    with open(csvpath, "w", newline='') as csvfile:
+       csvwriter =  csv.writer(csvfile)
+       
+       # if just one row in the list then write row or else write rows
+       if len(data) <=1:
+            csvwriter.writerow(data)
+       else:
+            csvwriter.writerows(data)
